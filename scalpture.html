@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sculptures - Sunita Arts Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/src/css/home_new.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg">
+    <script src="assets/src/js/auth.js"></script>
+</head>
+<body>
+    <!-- Modern Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.jpg" alt="Sunita Arts Logo">
+                <span>Sunita Arts</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="painting.html">
+                            <i class="fas fa-palette"></i> Paintings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i> My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="painting.html"><i class="fas fa-store"></i> Shop</a></li>
+                            <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart <span class="badge bg-primary ms-2" data-cart-count>0</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- Main content of the scalpture page-->
+  <section class="painting-gallery">
+    <div class="container">
+      <h1>Our scalpture Collection</h1>
+    <div class="row">
+
+      <!-- scalpture 1 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1544411047-c491e34a2465?w=800&q=80" alt="Owl Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1544411047-c491e34a2465?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Owl Sculpture</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹4,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- scalpture 2 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1554188248-986adbb73be4?w=800&q=80" alt="Human Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1554188248-986adbb73be4?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Human Sculpture</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹6,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!--scalpture 3 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&q=80" alt="Environmental Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Environmental Art</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹8,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- scalpture 4 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=800&q=80" alt="Marble Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Marble Lion Art</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹9,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!--scalpture 5 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=800&q=80" alt="Radha Krishna Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Radha Krishna Idol</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹5,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!--scalpture 6 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1569083345893-b4528ec11ef1?w=800&q=80" alt="Bronze Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1569083345893-b4528ec11ef1?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Bronze Landscape</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹8,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- scalpture 7 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=800&q=80" alt="Abstract Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=800&q=80"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Abstract Form</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹4,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- scalpture 8 -->
+      <div class="col-md-3">
+        <div class="painting-card">
+          <img src="https://tiimg.tistatic.com/fp/1/008/365/eco-friendly-clay-sculpture-for-home-decoration-use-810.jpg" alt="Traditional Clay Sculpture">
+          <div class="overlay">
+            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://tiimg.tistatic.com/fp/1/008/365/eco-friendly-clay-sculpture-for-home-decoration-use-810.jpg"><i class="fa fa-eye"></i></button>
+            <button class="like-btn" title="Like"><i class="fa fa-heart"></i></button>
+            <button class="cart-btn" title="Add to cart"><i class="fa fa-cart-plus"></i></button>
+          </div>
+          <div class="info">
+            <p class="title">Traditional Clay Art</p>
+            <p>30 x 36 inches</p>
+            <p class="price">₹9,000.00</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </section>
+
+  <!-- Modal for View -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="" alt="Large Painting" class="modal-img" id="modalImage">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Enhanced Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <h3>Sunita Arts</h3>
+                            <p class="tagline">Where Art Comes Alive</p>
+                        </div>
+                        <p>Celebrating the beauty of art and the spirit of creativity since 2009. Visit us to explore a world of artistic wonder, cultural heritage, and contemporary expressions that inspire and transform.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" aria-label="YouTube" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="painting.html">Paintings</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Contact & Hours</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Sunita Arts Gallery<br>Main Street, Contai<br>West Bengal 721401, India</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 7797147090<br>+91 8373084200</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@sunitaarts.com<br>admin@suni.org</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>&copy; 2024 Sunita Arts. All rights reserved. Designed with <i class="fas fa-heart pulse"></i> for art lovers.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-links-bottom">
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/src/js/navbar.js"></script>
+<script src="assets/src/js/painting.js"></script>
+<script>
+  // Update cart badge count from localStorage
+  function updateCartBadge() {
+    try {
+      const cart = JSON.parse(localStorage.getItem('suni_cart') || '[]');
+      const totalQty = cart.reduce((n, it) => n + (it.qty || 1), 0);
+      document.querySelectorAll('[data-cart-count]').forEach(el => {
+        el.textContent = totalQty;
+      });
+    } catch(e) {
+      console.error('Error updating cart badge:', e);
+    }
+  }
+  
+  // Update badge on page load
+  updateCartBadge();
+  
+  // Update badge when localStorage changes
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'suni_cart') {
+      updateCartBadge();
+    }
+  });
+</script>
+</body>
+</html>
+
+     
+      
+
+  

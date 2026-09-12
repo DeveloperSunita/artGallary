@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart - Sunita Arts</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/src/css/home_new.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg">
+  <script src="assets/src/js/auth.js"></script>
+  <style>
+    /* --- NEW COLOR PALETTE --- */
+    :root {
+    /* Primary: Deep Navy (Authority & Elegance) */
+    --primary: #0b1c2d;
+
+    /* Secondary: Slate Navy Grey */
+    --secondary: #2c405a;
+
+    /* Accent: Premium Soft Blue */
+    --accent: #4f8cff;
+
+    /* Functional */
+    --success: #2f8f6b;
+    --danger: #c24b4b;
+
+    /* Backgrounds */
+    --dark: #071423;
+    --light: #f2f5f9;
+    --white: #ffffff;
+
+    /* Typography */
+    --text: #1c2b3a;
+    --text-light: #6b7c8f;
+
+    /* Gradients (subtle & premium) */
+    --gradient-sunset: linear-gradient(
+        135deg,
+        #2c405a 0%,
+        #4f8cff 100%
+    );
+
+    --gradient-cosmic: linear-gradient(
+        135deg,
+        #0b1c2d 0%,
+        #16293d 100%
+    );
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(11, 28, 45, 0.05);
+    --shadow-md: 0 8px 24px rgba(11, 28, 45, 0.08);
+    --shadow-lg: 0 16px 48px rgba(11, 28, 45, 0.12);
+
+    /* Borders */
+    --radius: 2px;     /* Sharp, framed look */
+    --radius-lg: 4px;
+
+    /* Transitions */
+    --transition-fast: all 0.3s ease;
+}
+
+
+    /* --- GLOBAL RESET & TYPOGRAPHY --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- PAGE LAYOUT --- */
+    .cart-main {
+      flex: 1;
+      padding: 120px 0 80px;
+      background: var(--light);
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 300; /* Thinner, more elegant */
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 4px; /* Classic gallery spacing */
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* --- HEADER ACTIONS --- */
+    .header-actions {
+      display: flex;
+      justify-content: space-between; /* Spread them out */
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding-bottom: 1rem;
+    }
+
+    .header-actions .btn {
+      padding: 10px 24px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+    }
+
+    .btn-continue {
+      background: transparent;
+      border: 1px solid var(--secondary);
+      color: var(--secondary);
+    }
+
+    .btn-continue:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-clear {
+      background: transparent;
+      color: var(--text-light);
+      font-size: 0.8rem;
+    }
+
+    .btn-clear:hover {
+      color: var(--danger);
+      text-decoration: underline;
+      background: transparent;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* --- CART LAYOUT GRID --- */
+    .cart-layout {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 380px; /* Slightly narrower summary */
+      gap: 40px;
+    }
+
+    /* --- CART CONTAINER --- */
+    .cart-container {
+      background: transparent;
+      /* Removed heavy borders/shadows for a cleaner list view */
+    }
+
+    #cartEmpty {
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--text-light);
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    #cartEmpty i {
+      font-size: 4rem;
+      color: #e0e0e0;
+      margin-bottom: 24px;
+    }
+
+    #cartEmpty h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* --- CART ITEM --- */
+    .cart-item {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding: 24px;
+      margin-bottom: 16px;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.05); /* Very subtle border */
+      border-radius: var(--radius);
+      transition: var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cart-item:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: var(--accent); /* Gold border on hover */
+    }
+
+    .item-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 0; /* Sharp corners for art */
+      object-fit: cover;
+      border: 4px solid #fff; /* Mat board effect */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .item-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .item-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .item-size {
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    /* --- QUANTITY CONTROLS --- */
+    .item-controls {
+      display: flex;
+      align-items: center;
+      gap: 0; /* Connected buttons */
+      margin-top: 12px;
+      border: 1px solid #e0e0e0;
+      width: fit-content;
+      border-radius: var(--radius);
+    }
+
+    .qty-btn {
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: var(--white);
+      color: var(--primary);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:hover {
+      background: #f0f0f0;
+      color: var(--accent);
+    }
+
+    .qty-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      width: 32px;
+      text-align: center;
+      background: #f9f9f9;
+      height: 32px;
+      line-height: 32px;
+    }
+
+    /* --- ITEM RIGHT (Price & Delete) --- */
+    .item-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    .item-price {
+      font-size: 1.4rem;
+      font-weight: 400; /* Lighter weight for luxury feel */
+      color: var(--primary);
+      font-family: serif; /* Serif for numbers looks expensive */
+    }
+
+    .btn-delete {
+      background: transparent;
+      border: none;
+      color: var(--text-light);
+      padding: 5px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-delete:hover {
+      color: var(--danger);
+      background: transparent;
+      transform: none;
+      box-shadow: none;
+      text-decoration: underline;
+    }
+
+    /* --- SUMMARY BOX --- */
+    .summary-box {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.05);
+      border-top: 4px solid var(--accent); /* Gold accent top */
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      color: var(--text);
+    }
+
+    .summary-title {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      border-bottom: 1px dashed #eee;
+    }
+
+    .summary-row span:last-child {
+        font-family: serif;
+        font-size: 1.1rem;
+    }
+
+    .summary-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 0 0;
+      margin-top: 12px;
+      border-top: 1px solid var(--primary); /* Solid black line */
+      font-size: 1.5rem;
+      font-weight: 400;
+      align-items: center;
+    }
+    
+    .summary-total span:first-child {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .summary-total .value {
+      background: none;
+      -webkit-text-fill-color: initial;
+      color: var(--accent); /* Gold Price */
+      font-family: serif;
+      font-weight: 700;
+    }
+
+    .btn-checkout {
+      width: 100%;
+      background: var(--primary); /* Solid Black */
+      color: var(--accent);       /* Gold Text */
+      border: 1px solid var(--primary);
+      padding: 18px;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 32px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: none;
+    }
+
+    .btn-checkout:hover:not(:disabled) {
+      background: var(--white);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-checkout:disabled {
+      background: #ccc;
+      border-color: #ccc;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    /* --- FOOTER --- */
+    .main-footer {
+        background-color: var(--primary); /* Black Footer */
+        color: #999;
+        padding: 80px 0 30px;
+    }
+    
+    .footer-logo h3 { color: var(--white); font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+    .tagline { color: var(--accent); font-family: serif; font-style: italic; }
+    .footer-section h5 { color: var(--white); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .footer-links a { color: #999; text-decoration: none; transition: 0.3s; display: block; margin-bottom: 10px; }
+    .footer-links a:hover { color: var(--accent); padding-left: 5px; }
+    .social-link { width: 40px; height: 40px; border: 1px solid #333; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; margin-right: 10px; text-decoration: none; transition: 0.3s; }
+    .social-link:hover { border-color: var(--accent); color: var(--accent); }
+    .contact-item { margin-bottom: 15px; display: flex; gap: 15px; }
+    .contact-item i { color: var(--accent); margin-top: 5px; }
+    .footer-divider { border-color: #333; margin: 40px 0; }
+    .footer-bottom { font-size: 0.85rem; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 991px) {
+      .cart-layout {
+        grid-template-columns: 1fr;
+      }
+      .summary-box {
+        position: relative;
+        top: 0;
+        margin-top: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 1.8rem;
+      }
+      .cart-item {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+      }
+      .item-image {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+      }
+      .item-details { align-items: center; }
+      .item-right {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.jpg" alt="Sunita Arts Logo">
+        <span>Sunita Arts</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fas fa-info-circle"></i> About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="painting.html">
+              <i class="fas fa-palette"></i> Paintings
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">
+              <i class="fas fa-envelope"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              <i class="fas fa-user-circle"></i> My Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="painting.html"><i class="fas fa-store"></i> Shop</a></li>
+              <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart <span class="badge bg-primary ms-2" data-cart-count>0</span></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cart-main">
+    <div class="container">
+      <h1 class="page-title">Shopping Cart</h1>
+      
+      <div class="header-actions">
+        <a href="painting.html" class="btn btn-continue">
+          <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+        </a>
+        <button id="clearCart" class="btn btn-clear">
+          Clear Cart
+        </button>
+      </div>
+
+      <div class="cart-layout">
+        <div class="cart-container">
+          <div id="cartEmpty">
+            <i class="fas fa-shopping-bag"></i>
+            <h3>Your cart is empty</h3>
+            <p>Explore our collection to find your masterpiece.</p>
+          </div>
+          <div id="cartList"></div>
+        </div>
+
+        <div class="summary-box">
+          <h3 class="summary-title">Order Summary</h3>
+          <div class="summary-row">
+            <span>Artworks</span>
+            <span id="summaryItems">0</span>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summarySubtotal">₹0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span style="font-weight: 600; color: var(--success);">COMPLIMENTARY</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span>
+            <span class="value" id="summaryTotal">₹0.00</span>
+          </div>
+          <button class="btn-checkout" id="checkoutBtn" disabled>
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <h3>Sunita Arts</h3>
+                            <p class="tagline">Where Art Comes Alive</p>
+                        </div>
+                        <p>Celebrating the beauty of art and the spirit of creativity since 2009. Visit us to explore a world of artistic wonder.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="painting.html">Paintings</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Contact & Hours</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Sunita Arts Gallery<br>Main Street, Contai<br>West Bengal 721401, India</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 7797147090</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@sunitaarts.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p>&copy; 2025 Sunita Arts. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <a href="#privacy" style="color: #999; text-decoration: none; margin-left: 15px;">Privacy Policy</a>
+                        <a href="#terms" style="color: #999; text-decoration: none; margin-left: 15px;">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/src/js/navbar.js"></script>
+  <script src="assets/src/js/cart-utils.js"></script>
+  <script>
+    // Navbar dropdown stabilization and cart badge update
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update cart count badges
+      try {
+        const cart = JSON.parse(localStorage.getItem('suni_cart') || '[]');
+        const qty = cart.reduce((n,it)=> n + (it.qty || 1), 0);
+        document.querySelectorAll('[data-cart-count]').forEach(el => el.textContent = qty);
+      } catch(e) {}
+
+      const navbarToggler = document.querySelector('.custom-toggler');
+      const navbarCollapse = document.querySelector('#navbarNav');
+      if (navbarToggler && navbarCollapse) {
+        navbarCollapse.addEventListener('show.bs.collapse', function() {
+          navbarToggler.setAttribute('aria-expanded', 'true');
+        });
+        navbarCollapse.addEventListener('hide.bs.collapse', function() {
+          navbarToggler.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  </script>
+  <script>
+    const CART_KEY = 'suni_cart';
+    const cartList = document.getElementById('cartList');
+    const cartEmpty = document.getElementById('cartEmpty');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const summaryItems = document.getElementById('summaryItems');
+    const summarySubtotal = document.getElementById('summarySubtotal');
+    const summaryTotal = document.getElementById('summaryTotal');
+
+    const fmt = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' });
+
+    function getCart(){
+      try { return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); } catch { return []; }
+    }
+    function setCart(items){ localStorage.setItem(CART_KEY, JSON.stringify(items)); }
+    function totalQty(items){ return items.reduce((n,it)=> n + (it.qty || 1), 0); }
+    function subtotal(items){ return items.reduce((s,it)=> s + (Number(it.priceValue||0) * (it.qty||1)), 0); }
+    function updateBadge(){ 
+      document.querySelectorAll('[data-cart-count]').forEach(el => {
+        el.textContent = totalQty(getCart());
+      });
+    }
+
+    function renderCart(){
+      const items = getCart();
+      const cartListEl = document.getElementById('cartList');
+      cartListEl.innerHTML = '';
+      const has = items.length > 0;
+      cartEmpty.style.display = has ? 'none' : 'block';
+      checkoutBtn.disabled = !has;
+
+      if (has){
+        items.forEach((it, idx) => {
+          const div = document.createElement('div');
+          div.className = 'cart-item';
+          div.innerHTML = `
+            <img class="item-image" src="${it.img}" alt="${it.title}">
+            <div class="item-details">
+              <div class="item-name">${it.title || 'Painting'}</div>
+              <div class="item-size">Size: 30 x 36 inches</div>
+              <div class="item-controls">
+                <button class="qty-btn" data-dec="${idx}">−</button>
+                <span class="qty-value">${it.qty || 1}</span>
+                <button class="qty-btn" data-inc="${idx}">+</button>
+              </div>
+            </div>
+            <div class="item-right">
+              <div class="item-price">${fmt.format((it.priceValue||0) * (it.qty||1))}</div>
+              <button class="btn-delete" data-remove="${idx}">
+                Remove
+              </button>
+            </div>`;
+          cartListEl.appendChild(div);
+        });
+      }
+
+      const qty = totalQty(items);
+      const sub = subtotal(items);
+      summaryItems.textContent = qty;
+      summarySubtotal.textContent = fmt.format(sub);
+      summaryTotal.textContent = fmt.format(sub);
+      updateBadge();
+    }
+
+    function removeAt(idx){
+      const items = getCart();
+      items.splice(idx,1);
+      setCart(items);
+      renderCart();
+    }
+    function changeQty(idx, delta){
+      const items = getCart();
+      const it = items[idx];
+      if (!it) return;
+      const newQty = Math.max(1, (it.qty || 1) + delta);
+      it.qty = newQty;
+      setCart(items);
+      renderCart();
+    }
+
+    document.getElementById('clearCart').addEventListener('click', () => {
+      if (getCart().length === 0) return;
+      if (confirm('Clear all items from your cart?')){
+        setCart([]);
+        renderCart();
+      }
+    });
+
+    cartList.addEventListener('click', (e) => {
+      const removeBtn = e.target.closest('[data-remove]');
+      if (removeBtn) { removeAt(parseInt(removeBtn.getAttribute('data-remove'),10)); return; }
+      const incBtn = e.target.closest('[data-inc]');
+      if (incBtn) { changeQty(parseInt(incBtn.getAttribute('data-inc'),10), +1); return; }
+      const decBtn = e.target.closest('[data-dec]');
+      if (decBtn) { changeQty(parseInt(decBtn.getAttribute('data-dec'),10), -1); return; }
+    });
+
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+      alert('Checkout is a placeholder in this demo. Implement payment flow here.');
+    });
+
+    renderCart();
+  </script>
+</body>
+</html>

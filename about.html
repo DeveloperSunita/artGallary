@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sunita Arts Gallery</title>
+    <meta name="description" content="Learn about Sunita Arts Gallery, a premier space for Indian Art in Contai. Discover our mission, history, and commitment to preserving heritage while inspiring innovation.">
+    <meta name="keywords" content="about sunita arts, art gallery contai, indian art gallery, contemporary art, folk art, sculptures">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/src/css/home_new.css">
+    
+    <!-- Auth & Page Guard -->
+    <script src="assets/src/js/auth.js"></script>
+</head>
+<body>
+    <!-- Modern Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.jpg" alt="Sunita Arts Logo">
+                <span>Sunita Arts</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="painting.html">
+                            <i class="fas fa-palette"></i> Paintings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i> My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="painting.html"><i class="fas fa-store"></i> Shop</a></li>
+                            <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart <span class="badge bg-primary ms-2" data-cart-count>0</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-hero-content">
+                        <div class="hero-badge" data-aos="fade-up" data-aos-delay="100">
+                            <span>✨ About Sunita Arts Gallery ✨</span>
+                        </div>
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                            Preserving Heritage,
+                            <br><span class="gradient-text">Inspiring Innovation</span>
+                        </h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+                            For over 15 years, we have been at the forefront of promoting Indian art and culture, 
+                            providing a platform for both emerging and established artists to showcase their masterpieces 
+                            while bridging traditional techniques with contemporary innovation.
+                        </p>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#our-story" class="btn btn-primary btn-lg">
+                                <i class="fas fa-book-open"></i> Our Story
+                            </a>
+                            <a href="#mission-vision" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-bullseye"></i> Our Mission
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-hero-image">
+                        <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sunita Arts Gallery Interior">
+                        <div class="floating-stats" data-aos="fade-up" data-aos-delay="500">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Artworks</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Artists</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="our-story-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="about-image-container">
+                        <div class="about-main-image">
+                            <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gallery Interior">
+                        </div>
+                        <div class="about-floating-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="experience-badge">
+                                <span class="experience-number">15+</span>
+                                <span class="experience-text">Years of Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="about-content">
+                        <div class="section-header">
+                            <h2 class="section-title">Our Story</h2>
+                            <p class="section-subtitle">A Journey Through Art and Culture</p>
+                        </div>
+                        <p class="about-description">
+                            Sunita Arts is a premier space for Indian Art and an Online Art Gallery presenting the most enchanting Indian Art Paintings and Sculptures in Contai. Our collection includes creations by some of the best emerging and renowned artists of India.
+                        </p>
+                        <p class="about-description">
+                            We serve as a platform for young and established artists to showcase their artwork on a global stage, currently boasting one of the widest collections of contemporary paintings, drawings, folk art, sculptures, and photographs.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Curated by Art Experts</span>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="350">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Authentic Indian Artworks</span>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Supporting Local Artists</span>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="450">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Global Exhibition Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="mission-vision-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Mission & Vision</h2>
+                <p class="section-subtitle">Our commitment to art and culture</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To promote and preserve Indian art and culture by providing a platform for artists to showcase their work, connect with art enthusiasts, and contribute to the global art community. We strive to make art accessible to everyone while maintaining the highest standards of quality and authenticity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vision-card">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To become the leading destination for Indian contemporary and traditional art, fostering creativity and cultural exchange. We envision a world where art bridges communities, inspires innovation, and preserves our rich cultural heritage for future generations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-subtitle">What drives us every day</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Passion</h4>
+                        <p>We are passionate about art and committed to sharing that passion with the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Integrity</h4>
+                        <p>We maintain the highest standards of authenticity and ethical practices in all our dealings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>We embrace new technologies and methods to make art more accessible and engaging.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Community</h4>
+                        <p>We believe in building strong relationships within the art community and beyond.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-container" data-aos="zoom-in">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="cta-content">
+                            <h3>Ready to Explore Our Collection?</h3>
+                            <p>Visit our gallery or browse our online collection to discover amazing artworks from talented artists.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <div class="cta-actions">
+                            <a href="painting.html" class="btn btn-primary btn-lg">
+                                <i class="fas fa-images"></i> View Gallery
+                            </a>
+                            <a href="index.html#contact" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-phone"></i> Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <h3>Sunita Arts</h3>
+                            <p class="tagline">Where Art Comes Alive</p>
+                        </div>
+                        <p>Celebrating the beauty of art and the spirit of creativity since 2009. Visit us to explore a world of artistic wonder, cultural heritage, and contemporary expressions that inspire and transform.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" aria-label="YouTube" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="painting.html">Paintings</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Contact & Hours</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Sunita Arts Gallery<br>Main Street, Contai<br>West Bengal 721401, India</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 7797147090<br>+91 8373084200</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@sunitaarts.com<br>admin@suni.org</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>&copy; 2024 Sunita Arts. All rights reserved. Designed with <i class="fas fa-heart pulse"></i> for art lovers.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-links-bottom">
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Cosmic Background Elements -->
+    <div class="cosmic-bg">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+        <div class="star star-5"></div>
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Scroll to top functionality
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar transparency on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.15)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Initialize AOS (Animate On Scroll)
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Update cart badge count from localStorage
+            updateCartBadge();
+        });
+
+        // Update cart badge count from localStorage
+        function updateCartBadge() {
+            try {
+                const cart = JSON.parse(localStorage.getItem('suni_cart') || '[]');
+                const totalQty = cart.reduce((n, it) => n + (it.qty || 1), 0);
+                document.querySelectorAll('[data-cart-count]').forEach(el => {
+                    el.textContent = totalQty;
+                });
+            } catch(e) {
+                console.error('Error updating cart badge:', e);
+            }
+        }
+        
+        // Update badge when localStorage changes (from other tabs)
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'suni_cart') {
+                updateCartBadge();
+            }
+        });
+    </script>
+</body>
+</html>

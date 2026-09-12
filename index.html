@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunita Arts - Where Art Meets Soul | Premier Indian Art Gallery</title>
+    <meta name="description"
+        content="Discover the enchanting world of Indian Art at Sunita Arts Gallery. Explore paintings, sculptures, photography and traditional art forms from renowned and emerging artists.">
+    <meta name="keywords"
+        content="Indian art, art gallery, paintings, sculptures, photography, contemporary art, traditional art, Contai art gallery">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/src/css/home_new.css">
+
+    <!-- Auth & Page Guard -->
+    <script src="assets/src/js/auth.js"></script>
+</head>
+
+<body>
+    <!-- Modern Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.jpg" alt="Sunita Arts Logo">
+                <span>Sunita Arts</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="painting.html">
+                            <i class="fas fa-palette"></i> Paintings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i> My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="painting.html"><i class="fas fa-store"></i> Shop</a></li>
+                            <li><a class="dropdown-item" href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart
+                                    <span class="badge bg-primary ms-2" data-cart-count>0</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="geometric-bg">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="floating-elements">
+                <div class="floating-art-1">🎨</div>
+                <div class="floating-art-2">🖌️</div>
+                <div class="floating-art-3">🎭</div>
+                <div class="floating-art-4">📸</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span>✨ Welcome to Sunita Arts Gallery ✨</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Where Art Meets
+                            <span class="gradient-text">Soul</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Discover the enchanting world of Indian Art through our curated collection of paintings,
+                            sculptures, and photography. Experience creativity that transcends boundaries and touches
+                            hearts.
+                        </p>
+
+                        <div class="hero-cta">
+                            <a href="painting.html" class="btn btn-hero-primary">Explore Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container">
+                        <div class="hero-card hero-card-1">
+                            <img src="https://i.etsystatic.com/33571157/r/il/3c1c93/4593940941/il_fullxfull.4593940941_qesp.jpg"
+                                alt="Featured Art 1">
+                        </div>
+                        <div class="hero-card hero-card-2">
+                            <img src="https://tiimg.tistatic.com/fp/1/008/365/eco-friendly-clay-sculpture-for-home-decoration-use-810.jpg"
+                                alt="Featured Art 2">
+                        </div>
+                        <div class="hero-card hero-card-3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA5k2_GttByQbIjA9VuK0QS8G_MpS0Wckx1Q&s"
+                                alt="Featured Art 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Art Categories</h2>
+                <p class="section-subtitle">Explore diverse forms of artistic expression</p>
+            </div>
+            <div class="row g-4">
+                <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card category-card painting-card">
+                        <div class="card-image">
+                            <img src="https://paintedrhythm.com/wp-content/uploads/2021/11/Jayant-Patil-18-x-24-inches-18000-3.jpg" alt="Painting">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-palette"></i>
+                                    <h4>Explore Paintings</h4>
+                                    <p>200+ Artworks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h5 class="card-title">Painting</h5>
+                            <p class="card-description">Watercolor, acrylic & oil masterpieces that capture emotions and stories</p>
+                            <a href="painting.html" class="btn btn-category">View Collection</a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card category-card sculpture-card">
+                        <div class="card-image">
+                            <img src="https://paintedrhythm.com/wp-content/uploads/2021/11/Jayant-Patil-18-x-24-inches-18000-3.jpg"
+                                alt="Painting">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-hammer"></i>
+                                    <h4>Explore Paintings</h4>
+                                    <p>200+ Artworks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h5 class="card-title">Painting</h5>
+                            <p class="card-description">Watercolor, acrylic & oil masterpieces that capture emotions and
+                                stories</p>
+                            <a href="painting.html" class="btn btn-category">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card category-card sculpture-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade" alt="Sculpture">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-hammer"></i>
+                                    <h4>Explore Sculptures</h4>
+                                    <p>150+ Artworks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h5 class="card-title">Sculpture</h5>
+                            <p class="card-description">Beautiful handcrafted sculptures that bring imagination to life
+                            </p>
+                            <a href="scalpture.html" class="btn btn-category">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card category-card photography-card">
+                        <div class="card-image">
+                            <img src="https://img.freepik.com/free-photo/olivebacked-sunbirds-feeding-child-cinnyris-jugularis_488145-1597.jpg?semt=ais_hybrid&w=740&q=80"
+                                alt="Photography">
+                            <div class="card-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-camera"></i>
+                                    <h4>Explore Photography</h4>
+                                    <p>100+ Artworks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="category-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h5 class="card-title">Photography</h5>
+                            <p class="card-description">Stunning artistic photography that captures moments and emotions
+                            </p>
+                            <a href="photography.html" class="btn btn-category">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Showcase Section -->
+    <section id="gallery" class="gallery-showcase-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Gallery Showcase</h2>
+                <p class="section-subtitle">A curated collection of our finest artworks</p>
+            </div>
+
+            <!-- Gallery Filter Tabs -->
+            <div class="gallery-filter text-center mb-5" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Artworks
+                </button>
+                <button class="filter-btn" data-filter="paintings">
+                    <i class="fas fa-palette"></i> Paintings
+                </button>
+                <button class="filter-btn" data-filter="sculptures">
+                    <i class="fas fa-hammer"></i> Sculptures
+                </button>
+                <button class="filter-btn" data-filter="photography">
+                    <i class="fas fa-camera"></i> Photography
+                </button>
+                <button class="filter-btn" data-filter="digital">
+                    <i class="fas fa-desktop"></i> Digital Art
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item paintings" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-card">
+                        <img src="https://paintedrhythm.com/wp-content/uploads/2021/11/Jayant-Patil-18-x-24-inches-18000-3.jpg"
+                            alt="Traditional Painting">
+                        <div class="gallery-overlay">
+                            <h5>Serenity in Colors</h5>
+                            <p>By Rajesh Kumar</p>
+                            <div class="gallery-actions">
+                                <a href="#" class="btn-icon" data-bs-toggle="modal" data-bs-target="#artModal">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item sculptures" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Sculpture">
+                        <div class="gallery-overlay">
+                            <h5>Abstract Forms</h5>
+                            <p>By Arjun Patel</p>
+                            <div class="gallery-actions">
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item photography" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Street Photography">
+                        <div class="gallery-overlay">
+                            <h5>Urban Stories</h5>
+                            <p>By Meera Singh</p>
+                            <div class="gallery-actions">
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item paintings" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&q=80"
+                            alt="Abstract Art">
+                        <div class="gallery-overlay">
+                            <h5>Cosmic Dreams</h5>
+                            <p>By Priya Sharma</p>
+                            <div class="gallery-actions">
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item digital" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Digital Art">
+                        <div class="gallery-overlay">
+                            <h5>Digital Visions</h5>
+                            <p>Digital Art Collection</p>
+                            <div class="gallery-actions">
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item sculptures" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Clay Sculpture">
+                        <div class="gallery-overlay">
+                            <h5>Earthen Beauty</h5>
+                            <p>Traditional Art Collection</p>
+                            <div class="gallery-actions">
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a href="#" class="btn-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <button class="btn btn-outline-primary btn-lg" style="color: var(--text-light);" id="loadMoreGallery">
+                    <i class="fas fa-plus"></i> Load More Artworks
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="clients-section">
+        <div class="section-header">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Hear from our satisfied customers</p>
+        </div>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+
+                <!-- CLIENT 1 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Sunita Arts transformed our office space with stunning contemporary
+                        paintings!"</p>
+                    <div class="client-info">
+                        <h5>Rajesh Kumar</h5>
+                        <span>Corporate Client</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 2 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Sunita Arts stands out with beautiful sculptures that everyone admires!"
+                    </p>
+                    <div class="client-info">
+                        <h5>Priya Sharma</h5>
+                        <span>Art Enthusiast</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 3 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"The photography collection is breathtaking and adds soul to our home!"</p>
+                    <div class="client-info">
+                        <h5>Arjun Patel</h5>
+                        <span>Home Owner</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 4 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Custom painting exceeded expectations - professional and memorable!"</p>
+                    <div class="client-info">
+                        <h5>Meera Singh</h5>
+                        <span>Wedding Client</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 5 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐</div>
+                    <p class="client-quote">"Traditional art pieces bring authenticity to our restaurant!"</p>
+                    <div class="client-info">
+                        <h5>Vikram Rao</h5>
+                        <span>Restaurant Owner</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 6 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Digital art collection is innovative and perfect for our office!"</p>
+                    <div class="client-info">
+                        <h5>Ananya Gupta</h5>
+                        <span>Startup Founder</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 7 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Attention to detail in sculptures is remarkable - true masterpieces!"</p>
+                    <div class="client-info">
+                        <h5>Dr. Ramesh Jain</h5>
+                        <span>Art Professor</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 8 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Perfect artwork for our hotel lobby - elegant and welcoming!"</p>
+                    <div class="client-info">
+                        <h5>Sanjay Mehta</h5>
+                        <span>Hotel Manager</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 9 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Museum-quality pieces at affordable prices - absolutely impressed with the
+                        craftsmanship!"</p>
+                    <div class="client-info">
+                        <h5>Isabella Martinez</h5>
+                        <span>Interior Designer</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 10 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Every piece tells a story - my living room now feels like an art gallery!"
+                    </p>
+                    <div class="client-info">
+                        <h5>Nikhil Desai</h5>
+                        <span>Art Collector</span>
+                    </div>
+                </div>
+
+                <!-- CLIENT 11 -->
+                <div class="client-card">
+                    <div class="client-avatar">
+                        <img src="https://images.unsplash.com/photo-1500295942863-6f3ee5c54d0e?w=100">
+                    </div>
+                    <div class="client-rating">⭐⭐⭐⭐</div>
+                    <p class="client-quote">"Exceptional customer service and delivery experience - highly recommended!"
+                    </p>
+                    <div class="client-info">
+                        <h5>Divya Nair</h5>
+                        <span>Gallery Owner</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Carousel Section -->
+    <section class="client-carousel-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Client Experiences</h2>
+                <p class="section-subtitle">Real stories from our satisfied patrons</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="slide-content">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">Sunita Arts has been instrumental in bringing my vision to life.
+                                The team's expertise and dedication are unmatched in the industry.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h6>Ravi Kumar</h6>
+                                    <p>Corporate Executive</p>
+                                </div>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">The quality and authenticity of the artwork is outstanding. Each
+                                piece feels like a personal connection to the artist's soul.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h6>Sophia Chen</h6>
+                                    <p>Art Collector</p>
+                                </div>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">Our gallery partnership with Sunita Arts has significantly
+                                elevated our artistic offerings and customer satisfaction.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h6>Marcus Thompson</h6>
+                                    <p>Gallery Curator</p>
+                                </div>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">Transformed our space beautifully. The consultation process was
+                                smooth and the final result exceeded all expectations.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h6>Elena Rodriguez</h6>
+                                    <p>Interior Design Client</p>
+                                </div>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">A treasure trove of contemporary and traditional art. Every
+                                visit brings new discoveries and inspirations.</p>
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <h6>David Wong</h6>
+                                    <p>Regular Customer</p>
+                                </div>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-btn next-btn" onclick="moveSlide(1)">❯</button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                    <span class="indicator" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Client Reviews Section -->
+    <section class="client-reviews-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Client Feedback</h2>
+                <p class="section-subtitle">What patrons love about our gallery</p>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-box">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80"
+                                alt="Anita Verma">
+                        </div>
+                        <div class="reviewer-details">
+                            <h5>Anita Verma</h5>
+                            <p>Architect</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">Exceptional collection! The blend of modern and traditional art is perfect
+                        for design inspiration.</p>
+                    <div class="review-tag">#Contemporary</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-box">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80"
+                                alt="Anil Sharma">
+                        </div>
+                        <div class="reviewer-details">
+                            <h5>Anil Sharma</h5>
+                            <p>Businessman</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">Best investment in art pieces! Every artwork is carefully curated and
+                        authentic.</p>
+                    <div class="review-tag">#Investment</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-box">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80"
+                                alt="Priya Desai">
+                        </div>
+                        <div class="reviewer-details">
+                            <h5>Priya Desai</h5>
+                            <p>Wedding Planner</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">Perfect venue decoration pieces for weddings. The team was incredibly
+                        supportive!</p>
+                    <div class="review-tag">#Events</div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-box">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80"
+                                alt="Rohit Patel">
+                        </div>
+                        <div class="reviewer-details">
+                            <h5>Rohit Patel</h5>
+                            <p>Art Student</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★</div>
+                    <p class="review-text">Great learning experience! The artists here are incredibly talented and
+                        inspiring.</p>
+                    <div class="review-tag">#Education</div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-box">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80"
+                                alt="Neha Singh">
+                        </div>
+                        <div class="reviewer-details">
+                            <h5>Neha Singh</h5>
+                            <p>Travel Blogger</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">Hidden gem! A must-visit gallery with authentic Indian art. Highly
+                        recommended!</p>
+                    <div class="review-tag">#Travel</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-box">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80"
+                                alt="Vikram Nair">
+                        </div>
+                        <div class="reviewer-details">
+                            <h5>Vikram Nair</h5>
+                            <p>Museum Director</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">Outstanding craftsmanship and museum-quality pieces. A true celebration of
+                        art!</p>
+                    <div class="review-tag">#Museum</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Visit us, call us, or send us a message</p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Contact Information -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Visit Our Gallery</h4>
+                                <p>Sunita Arts Gallery<br>
+                                    Main Street, Contai<br>
+                                    West Bengal 721401, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p>+91 7797147090<br>
+                                    +91 8373084200</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p>info@sunitaarts.com<br>
+                                    admin@suni.org</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Opening Hours</h4>
+                                <p>Monday - Saturday: 10 AM - 7 PM<br>
+                                    Sunday: 11 AM - 6 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <select class="form-control" id="subject">
+                                            <option>General Inquiry</option>
+                                            <option>Purchase Inquiry</option>
+                                            <option>Workshop Information</option>
+                                            <option>Commission Request</option>
+                                            <option>Exhibition Inquiry</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message">Message *</label>
+                                        <textarea class="form-control" id="message" rows="6" required
+                                            placeholder="Tell us about your inquiry..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <h3>Sunita Arts</h3>
+                            <p class="tagline">Where Art Comes Alive</p>
+                        </div>
+                        <p>Celebrating the beauty of art and the spirit of creativity since 2009. Visit us to explore a
+                            world of artistic wonder, cultural heritage, and contemporary expressions that inspire and
+                            transform.</p>
+                        <div class="social-links">
+                            <a href="https://facebook.com" aria-label="Facebook" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" aria-label="Instagram" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" aria-label="Twitter" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://youtube.com" aria-label="YouTube" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://LinkedIn.com" aria-label="LinkedIn" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="painting.html">Paintings</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Contact & Hours</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Sunita Arts Gallery<br>Main Street, Contai<br>West Bengal 721401, India</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 7797147090<br>+91 8373084200</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@sunitaarts.com<br>admin@suni.org</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>&copy; 2024 Sunita Arts. All rights reserved. Designed with <i
+                                    class="fas fa-heart pulse"></i> for art lovers.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-links-bottom">
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Cosmic Background Elements -->
+    <div class="cosmic-bg">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+        <div class="star star-5"></div>
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                let count = 0;
+                const increment = target / 100;
+
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        counter.innerText = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.innerText = Math.floor(count);
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.hero-stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Gallery filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const filter = this.getAttribute('data-filter');
+
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeInUp 0.5s ease forwards';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Scroll to top functionality
+        const scrollToTopButton = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.hero-section');
+            if (!particlesContainer) return;
+
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            createParticles();
+
+            // Initialize AOS (Animate On Scroll)
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+
+        // Add hover effect to category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-15px) rotateY(5deg) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) rotateY(0) scale(1)';
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+            });
+        }
+
+        // Load more gallery items
+        const loadMoreButton = document.getElementById('loadMoreGallery');
+        if (loadMoreButton) {
+            loadMoreButton.addEventListener('click', function () {
+                alert('Loading more artworks...');
+            });
+        }
+
+        // Update cart badge count from localStorage
+        function updateCartBadge() {
+            try {
+                const cart = JSON.parse(localStorage.getItem('suni_cart') || '[]');
+                const totalQty = cart.reduce((n, it) => n + (it.qty || 1), 0);
+                document.querySelectorAll('[data-cart-count]').forEach(el => {
+                    el.textContent = totalQty;
+                });
+            } catch (e) {
+                console.error('Error updating cart badge:', e);
+            }
+        }
+
+        // Update badge on page load
+        updateCartBadge();
+
+        // Update badge when localStorage changes (from other tabs)
+        window.addEventListener('storage', function (e) {
+            if (e.key === 'suni_cart') {
+                updateCartBadge();
+            }
+        });
+    </script>
+    <script src="assets/src/js/carousel.js"></script>
+</body>
+
+</html>
